@@ -1,0 +1,28 @@
+{
+  "root": "apps/atlantum-website-e2e",
+  "sourceRoot": "apps/atlantum-website-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/atlantum-website-e2e/cypress.json",
+        "devServerTarget": "atlantum-website:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "atlantum-website:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/atlantum-website-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["atlantum-website"]
+}

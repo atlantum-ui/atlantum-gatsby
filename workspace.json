@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "atlantum-website": "apps/atlantum-website",
+    "atlantum-website-e2e": "apps/atlantum-website-e2e"
+  }
+}
